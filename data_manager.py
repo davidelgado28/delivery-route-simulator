@@ -66,20 +66,6 @@ class DatabaseManager:
         traffic: str,
         delay_prob: float
     ) -> bool:
-        """Salva uma simulação executada no banco de dados.
-
-        Args:
-            route_names: Lista ordenada de nomes dos locais visitados.
-            total_distance: Distância total percorrida em km.
-            total_time: Tempo estimado total em minutos.
-            fuel_consumed: Combustível gasto em litros.
-            weather: Condição climática da simulação.
-            traffic: Estado do tráfego.
-            delay_prob: Probabilidade de atraso em percentual (0-100).
-
-        Returns:
-            bool: True se inserido com sucesso, False caso contrário.
-        """
         query = """
         INSERT INTO route_history 
         (route_path, total_distance_km, total_time_min, fuel_consumed_l, weather, traffic_condition, delay_probability)
