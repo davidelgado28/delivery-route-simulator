@@ -107,11 +107,6 @@ class DatabaseManager:
             return False
 
     def fetch_history(self) -> List[Dict[str, Any]]:
-        """Recupera todo o histórico de execuções salvas.
-
-        Returns:
-            List[Dict[str, Any]]: Lista de dicionários contendo os registros do histórico.
-        """
         query = "SELECT * FROM route_history ORDER BY id DESC"
         records = []
         try:
